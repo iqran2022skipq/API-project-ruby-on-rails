@@ -1,0 +1,18 @@
+<div class="container p-5 text-white my-5 rounded shadow border border-danger text-center" >
+        <h1 class="text-center text-uppercase">Air Qaulity</h1>
+        
+        <%if  @result > 0 and @result <50 %>
+        <span>Air Qaulity Index is: <%= @result %> It seems to be <span class="text-success fs-3 fw-bold"> Good </span></span>
+        <%elsif  @result > 51 and @result <100 %>
+        <span>Air Qaulity Index is: <%= @result %> It seems to be  <span class="text-info fs-3 fw-bold"> Moderate </span></span>
+        <%elsif  @result > 101 and @result <151 %>
+        <span>Air Qaulity Index is: <%= @result %> It seems to be  <span class="text-warning fs-3 fw-bold"> Unhealthy for sensitive groups </span></span>
+        <%else%>
+        <span>Air Qaulity Index is: <%= @result %> It seems to be <span class="text-danger fs-3 fw-bold"> Unhealthy </span></span>
+        <%end%>
+</div>
+
+
+
+
+
